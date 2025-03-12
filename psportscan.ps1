@@ -1,9 +1,9 @@
-$ipRange = "127.0.0.1"  # IP range to scan (in this case, localhost)
+$iprng = "127.0.0.1"  # IP range to scan (in this case, localhost)
 
-$portRange = 130..140    # Port range to scan (from port 130 to 140)
+$portrng = 130..140    # Port range to scan (from port 130 to 140)
 
-foreach ($ip in $ipRange) {
-    foreach ($port in $portRange) {
+foreach ($ip in $iprng) {
+    foreach ($port in $portrng) {
         $tcpClient = New-Object System.Net.Sockets.TcpClient
         $tcpClient.ReceiveTimeout = 500  # Set receive timeout to 500 milliseconds
         
